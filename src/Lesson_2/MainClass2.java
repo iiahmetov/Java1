@@ -95,22 +95,22 @@ public class MainClass2 {
 
     //Решение задания 6
     public static void checkBalance(int[] a){
-        double sum = 0;
+        double sum = 0;                                         //создан параметр суммы массива
         for (int i = 0; i < a.length; i++) {
-            sum += a[i];
+            sum += a[i];                                        //просуммировал все элементы массива
         }
-        double half = sum/2;
-        boolean flag = false;
+        double half = sum/2;                                    //вычислил половину суммы элементов массива
+        boolean flag = false;                                   //создал переменную с ответом по-умолчанию "ложный"
         for (int i = 0; i < a.length; i++) {
             sum -= a[i];
-            if (half == sum) flag = true;
+            if (half == sum) flag = true;                       //проверяю выполнение условия и в случае успеха переменная с ответом = "истинная"
         }
         System.out.println(flag);
     }
 
     //Решение задания 7
     public static int[] smeschenie(int[] a, int n){
-        
+
     }
 
 }
