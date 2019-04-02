@@ -114,18 +114,18 @@ public class MainClass2 {
 
     //Решение задания 7
     public static int[] smeschenie(int[] a, int n){
-        if (n > 0) {
-            for (int i = a.length-1; i >= n ; i--) {
+        if (n > 0) {                                            //проверяю направление смещения массива
+            for (int i = a.length-1; i >= n ; i--) {            //смещаю вправо начиная с конца массива
                 a[i] = a[i-n];
             }
-            for (int i = 0; i < n ; i++) {
+            for (int i = 0; i < n ; i++) {                      //"выкалываю" первые n ячеек, т.к. их значение должно быть по-умолчанию  0
                 a[i] = 0;
             }
         } else {
-            for (int i = 0; i < a.length + n; i++) {
+            for (int i = 0; i < a.length + n; i++) {            //смещаю влево с начала массива
                 a[i] = a[i-n];
             }
-            for (int i = a.length - 1; i >= a.length + n ; i--) {
+            for (int i = a.length - 1; i >= a.length + n ; i--) {   //"выкалываю" последние n ячеек, т.к. их значение должно быть по-умолчанию  0
                 a[i] = 0;
             }
         }
