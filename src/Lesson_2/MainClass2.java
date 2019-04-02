@@ -9,6 +9,7 @@ public class MainClass2 {
         int[] arr3 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         int[][] matr1 = new int[6][6];
         int[] arr4 = {3, 1, 1, 2, 1};
+        int[] arr5 = {1, 2, 3, 4, 5, 6};
 
 
         //Задание 1
@@ -40,6 +41,9 @@ public class MainClass2 {
         System.out.println(Arrays.toString(arr4));              //вывожу исходный массив
         checkBalance(arr4);
 
+        //Задание 7
+        System.out.println(Arrays.toString(arr5));              //вывожу исходный массив
+        System.out.println(Arrays.toString(smeschenie(arr5, -2)));  //вывожу преобразованный массив
 
     }
 
@@ -110,7 +114,22 @@ public class MainClass2 {
 
     //Решение задания 7
     public static int[] smeschenie(int[] a, int n){
-
+        if (n > 0) {
+            for (int i = a.length-1; i >= n ; i--) {
+                a[i] = a[i-n];
+            }
+            for (int i = 0; i < n ; i++) {
+                a[i] = 0;
+            }
+        } else {
+            for (int i = 0; i < a.length + n; i++) {
+                a[i] = a[i-n];
+            }
+            for (int i = a.length - 1; i >= a.length + n ; i--) {
+                a[i] = 0;
+            }
+        }
+        return (a);
     }
 
 }
