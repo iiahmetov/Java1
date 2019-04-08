@@ -40,7 +40,7 @@ public class MainClass3 {
                 flag = true;                                                //в случае отказа устанавливаю положение флага таковым, чтобы игра завершилась
             }
         } while (flag == false);                                            //проверяю условие продолжения игры
-        sc.close();                                                         //закрываю сканер
+//        sc.close();                                                         //закрываю сканер
     }
 
     public static void polechudes(String[] arr) {
@@ -69,7 +69,7 @@ public class MainClass3 {
                 }
             p++;                                                                                        //увеличиваю счётчик попыток на 1
         } while (flag == false);
-        sc.close();                                                                                     //закрываю объект сканер
+//        sc.close();                                                                                     //закрываю объект сканер
     }
 }
 
