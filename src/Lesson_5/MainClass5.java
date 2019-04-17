@@ -16,7 +16,7 @@ public class MainClass5 {
 
     public static void AgeTest(Employee[] dude, int age) {
         for (int i = 0; i < dude.length; i++) {              //цикл по всему массиву
-            if (dude[i].age > age) {                         //проверка по параметру возраста
+            if (dude[i].getAge() > age) {                    //проверка по параметру возраста через геттер
                 dude[i].info();                              //обращение к встроенному методу класса
                 System.out.println();                        //пропуск строки для разделения работников, удовлетворяющих параметру поиска
             }

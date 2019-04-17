@@ -1,12 +1,12 @@
 package Lesson_5;
 
 public class Employee {             //создаю класс сотрудников
-    String fio;                     //прописываю параметры сотрдников
-    String position;
-    String email;
-    String phonenumber;
-    int wage;
-    int age;
+    private String fio;                     //прописываю параметры сотрудников
+    private String position;
+    private String email;
+    private String phonenumber;
+    private int wage;
+    private int age;
 
 public void info(){                                             //написан метод, выводящий информацию об объекте в консоль
     System.out.println("ФИО сотрудника: " + this.fio);
@@ -25,4 +25,8 @@ public void info(){                                             //написан
         this.wage = wage;
         this.age = age;
     }
+public int getAge(){
+    return this.age;
+}
+
 }
